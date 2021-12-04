@@ -10,7 +10,7 @@ import colors from '../config/colors';
 import MapView , {Marker} from "react-native-maps";
 //for at bruge colors.primary og/eller colors.secondary
 
-const Chat = ({navigation}) =>{
+const Map = ({navigation}) =>{
     //instatieringen af alle anvendte statevariabler
     const [hasLocationPermission,setLocationPermission] = useState(false);
     const [currentLocation,setCurrentLocation] = useState(null);
@@ -148,4 +148,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Chat;
+export default Map;

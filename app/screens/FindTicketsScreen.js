@@ -5,10 +5,10 @@ import {StatusBar} from "expo-status-bar";
 import colors from '../config/colors';
 //for at bruge colors.primary og/eller colors.secondary
 
-const WelcomeScreen = ({}) =>{
+const FindTicket = ({navigation}) =>{
     return (
         <View style={styles.container}>
-            <Text>Dette er forsideen. Her skal du registrere dig</Text>
+            <Text>Find alle tickets her, som der er blevet oprettet</Text>
         </View>
     );
 }
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default WelcomeScreen;
+export default FindTicket;
