@@ -3,7 +3,6 @@ import {Text,StyleSheet,View,TextInput,TouchableOpacity} from 'react-native';
 import {StatusBar} from "expo-status-bar";
 
 import colors from '../config/colors';
-//for at bruge colors.primary og/eller colors.secondary
 
 const ReportScreen = ({}) =>{
     const buttonHasBeenClicked = () => {

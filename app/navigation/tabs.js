@@ -6,7 +6,7 @@ import WelcomeScreen from "../screens/WelcomeScreen";
 import ReportScreen from "../screens/ReportScreen";
 import MyProfile from "../screens/MyProfile";
 import Map from "../screens/MapScreen";
-import FindTicket from "../screens/FindTicketsScreen";
+import MessagesScreen from "../screens/FindTicketsScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -50,13 +50,13 @@ const Tabs = () => {
         }}>
 
             <Tab.Screen
-                name="Home"
+                name="Register your car"
                 component ={WelcomeScreen}
                 options={{
                 tabBarIcon: ({focused}) => (
                     <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
                         <Image
-                            source={require('../assets/icons/home_icon.png')}
+                            source={require('../assets/icons/car_icon.png')}
                             resizeMode='contain'
                             style={{
                                 width: 25,
@@ -69,11 +69,12 @@ const Tabs = () => {
                     </View>
                         ),
                         }}/>
-                        <Tab.Screen name="Find" component ={FindTicket} options={{
+
+                        <Tab.Screen name="Messages" component ={MessagesScreen} options={{
                 tabBarIcon: ({focused}) => (
                     <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
                         <Image
-                            source={require('../assets/icons/find_icon.png')}
+                            source={require('../assets/icons/chat_icon.png')}
                             resizeMode='contain'
                             style={{
                                 width: 25,
@@ -81,11 +82,12 @@ const Tabs = () => {
                                 tintColor: focused ? '#e32f45' : '#748c94'
                             }}/>
                         <Text style={{color: focused ? '#e32f45' : '#748c94',fontSize:12}}>
-                            Find
+                            Messages
                         </Text>
                     </View>
                         ),
                         }}/>
+
                         <Tab.Screen name="Report" component={ReportScreen} options={{
                             tabBarIcon: ({focused}) => (
                                 <Image source={require('../assets/icons/plus_icon.png')}
@@ -101,7 +103,7 @@ const Tabs = () => {
                                 <CustomTabBarButton {...props} />
                             )
                         }}/>
-                        <Tab.Screen name="Chat" component={Map} options={{
+                        <Tab.Screen name="Map" component={Map} options={{
                             tabBarIcon: ({focused}) => (
                                 <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
                                     <Image
@@ -118,7 +120,7 @@ const Tabs = () => {
                                 </View>
                             ),
                         }}/>
-                        <Tab.Screen name="Profil" component={MyProfile} options={{
+                        <Tab.Screen name="Profile" component={MyProfile} options={{
                             tabBarIcon: ({focused}) => (
                                 <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
                                     <Image
