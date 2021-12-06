@@ -1,8 +1,7 @@
 import React from 'react';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
-import {createStackNavigator} from "@react-navigation/stack";
 import {StyleSheet,View,Image,TouchableOpacity,Text} from 'react-native';
-import {MainStackNavigator }from './StackNavigator';
+import {MainStackNavigator,ChatStackNavigator }from './StackNavigator';
 
 import WelcomeScreen from "../screens/WelcomeScreen";
 import ReportScreen from "../screens/ReportScreen";
@@ -12,7 +11,6 @@ import MessagesScreen from "../screens/FindTicketsScreen";
 
 
 const Tab = createBottomTabNavigator();
-const HomeStack = createStackNavigator();
 
 const CustomTabBarButton = ({children,onPress}) => (
     <TouchableOpacity
@@ -36,6 +34,16 @@ const CustomTabBarButton = ({children,onPress}) => (
 );
 
 const Tabs = () => {
+    const getTabBarVisibility = (route) => {
+        const routeName = route.state ? route.state.routes[route.state.index].name : '';
+
+        if(routeName === "Chat") {
+            return false;
+        } else {
+            return true;
+        }
+    };
+
     return (
         <Tab.Navigator
         screenOptions={{
@@ -74,7 +82,8 @@ const Tabs = () => {
                         ),
                         }}/>
 
-                        <Tab.Screen name="Messages" component ={MessagesScreen} options={{
+                        <Tab.Screen name="Messages" component ={ChatStackNavigator} options={({route}) => ({
+                            tabBarVisible: getTabBarVisibility(route),
                 tabBarIcon: ({focused}) => (
                     <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
                         <Image
@@ -90,7 +99,7 @@ const Tabs = () => {
                         </Text>
                     </View>
                         ),
-                        }}/>
+                        })}/>
 
                         <Tab.Screen name="Report" component={ReportScreen} options={{
                             tabBarIcon: ({focused}) => (
