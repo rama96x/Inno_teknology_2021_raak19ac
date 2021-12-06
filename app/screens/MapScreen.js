@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,StyleSheet,View,SafeAreaView,Button} from 'react-native';
+import {Text,StyleSheet,View,SafeAreaView,Button,TouchableOpacity} from 'react-native';
 import Constants from "expo-constants/src/Constants";
 import * as Location from 'expo-location';
 import {Accuracy} from "expo-location";
@@ -74,6 +74,19 @@ const Map = ({navigation}) =>{
             </View>
         );
       };
+
+   /*  function renderButtons() {
+         return(
+             <View
+             style={{
+                 position: 'absolute',
+                 bottom: SIZES.
+             }}>
+
+             </View>
+         )
+
+     }*/
 
      {
          return (

@@ -19,7 +19,7 @@ import {
 const Messages = [
     {
         id: '1',
-        userName: 'Jenny Doe',
+        userName: 'Sine Zambach',
         userImg: require('../assets/users/user_image_female.png'),
         messageTime: '2 hours ago',
         messageText:
@@ -27,7 +27,7 @@ const Messages = [
     },
     {
         id: '2',
-        userName: 'John Doe',
+        userName: 'Ramazan Akbas',
         userImg: require('../assets/users/random_user_2.png'),
         messageTime: '2 months ago',
         messageText:

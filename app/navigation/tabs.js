@@ -1,6 +1,8 @@
 import React from 'react';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
+import {createStackNavigator} from "@react-navigation/stack";
 import {StyleSheet,View,Image,TouchableOpacity,Text} from 'react-native';
+import {MainStackNavigator }from './StackNavigator';
 
 import WelcomeScreen from "../screens/WelcomeScreen";
 import ReportScreen from "../screens/ReportScreen";
@@ -8,7 +10,9 @@ import MyProfile from "../screens/MyProfile";
 import Map from "../screens/MapScreen";
 import MessagesScreen from "../screens/FindTicketsScreen";
 
+
 const Tab = createBottomTabNavigator();
+const HomeStack = createStackNavigator();
 
 const CustomTabBarButton = ({children,onPress}) => (
     <TouchableOpacity
@@ -50,8 +54,8 @@ const Tabs = () => {
         }}>
 
             <Tab.Screen
-                name="Register your car"
-                component ={WelcomeScreen}
+                name="Home"
+                component ={MainStackNavigator}
                 options={{
                 tabBarIcon: ({focused}) => (
                     <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
@@ -139,7 +143,9 @@ const Tabs = () => {
                         }}/>
                     </Tab.Navigator>
                 );
-            }
+            };
+
+export default Tabs;
 
 const styles = StyleSheet.create({
     shadow:{
@@ -153,5 +159,3 @@ const styles = StyleSheet.create({
         elevation: 5
     }
 });
-
-export default Tabs;

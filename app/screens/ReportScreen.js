@@ -107,6 +107,9 @@ const styles = StyleSheet.create({
         left: 225,
         bottom: 100
     },
+    submitButton: {
+
+    },
     innerFontColor: {
         color:'white'
     }
