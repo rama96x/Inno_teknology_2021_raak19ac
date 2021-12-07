@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {View,ScrollView,Text,Button,StyleSheet} from 'react-native';
 import {GiftedChat} from "react-native-gifted-chat";
 
+
 /**
  * Dokumentation for denne simple chat system er fundet i denne Github rep:
 * https://github.com/FaridSafi/react-native-gifted-chat

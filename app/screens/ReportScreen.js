@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,StyleSheet,View,TextInput,TouchableOpacity} from 'react-native';
+import {Text,StyleSheet,View,TextInput,TouchableOpacity,KeyboardAvoidingView} from 'react-native';
 import {StatusBar} from "expo-status-bar";
 
 import colors from '../config/colors';
@@ -11,16 +11,17 @@ const ReportScreen = ({}) =>{
     return (
         <View style={styles.tasksWrapper}>
             <Text style={styles.sectionTitle}> Report an incident now </Text>
+            <Text style={styles.titleInput}> Whats the issue?</Text>
+            <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"}>
+                <TextInput
+                    multiline
+                    placeholder='Be as detailed as possible'
+                    style={styles.input}
+                />
+            </KeyboardAvoidingView>
 
 
-            <Text> Whats the issue?</Text>
-            <TextInput
-                multiline
-                placeholder='Be as detailed as possible'
-                style={styles.input}
-            />
-            <View style={styles.drawHorizontalLine}>
-            </View>
+            <View style={styles.drawHorizontalLine}/>
 
             <View>
             <TouchableOpacity
@@ -40,8 +41,11 @@ const ReportScreen = ({}) =>{
                     style={styles.roundButton2}>
                     <Text>Battery issues</Text>
                 </TouchableOpacity>
+
             </View>
+
         </View>
+
     );
 };
 
@@ -52,12 +56,15 @@ const styles = StyleSheet.create({
         backgroundColor: colors.white,
     },
     tasksWrapper: {
-        paddingTop: 50,
+        paddingTop: 45,
         paddingHorizontal: 20
     },
     sectionTitle:{
         fontSize: 24,
-        fontWeight:"bold"
+        fontWeight:"bold",
+    },
+    titleInput: {
+        paddingTop:25
     },
     input: {
         borderWidth:1,
@@ -108,12 +115,9 @@ const styles = StyleSheet.create({
         left: 225,
         bottom: 100
     },
-    submitButton: {
-
-    },
     innerFontColor: {
         color:'white'
-    }
+    },
 });
 
 export default ReportScreen;

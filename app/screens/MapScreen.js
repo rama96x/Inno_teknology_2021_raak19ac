@@ -75,19 +75,6 @@ const Map = ({navigation}) =>{
         );
       };
 
-   /*  function renderButtons() {
-         return(
-             <View
-             style={{
-                 position: 'absolute',
-                 bottom: SIZES.
-             }}>
-
-             </View>
-         )
-
-     }*/
-
      {
          return (
              <SafeAreaView style={styles.container}>
@@ -100,17 +87,6 @@ const Map = ({navigation}) =>{
                  <Marker
                      coordinate={{ latitude: 55.676195, longitude: 12.569419 }}
                      title="Rådhuspladsen"
-                     description="blablabal"
-                 />
-                 <Marker
-                     coordinate={{ latitude: 55.673035, longitude: 12.568756 }}
-                     title="Tivoli"
-                     description="blablabal"
-                 />
-                 <Marker
-                     coordinate={{ latitude: 55.674082, longitude: 12.598108 }}
-                     title="Christiania"
-                     description="blablabal"
                  />
                  {userMarkerCoordinates.map((coordinate, index) => (
                      <Marker

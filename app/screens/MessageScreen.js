@@ -12,7 +12,6 @@ import {
     MessageText,
     TextSection,
 } from '../styles/MessagesStyle';
-
 /*
 * Hardcoder 2 beskeder i en list/array
 * */
@@ -36,7 +35,7 @@ const Messages = [
 ];
 
 /*
-* Her defineres UI, hvor jeg kalder på værdierne i mit array.*/
+* Her defineres UI, hvor jeg kalder på værdierne i mit array fra oven.*/
 const MessagesScreen = ({navigation}) => {
     return (
         <Container>

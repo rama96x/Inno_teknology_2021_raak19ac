@@ -3,12 +3,9 @@ import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {StyleSheet,View,Image,TouchableOpacity,Text} from 'react-native';
 import {MainStackNavigator,ChatStackNavigator }from './StackNavigator';
 
-import WelcomeScreen from "../screens/WelcomeScreen";
 import ReportScreen from "../screens/ReportScreen";
 import MyProfile from "../screens/MyProfile";
 import Map from "../screens/MapScreen";
-import MessagesScreen from "../screens/FindTicketsScreen";
-
 
 const Tab = createBottomTabNavigator();
 
@@ -34,15 +31,6 @@ const CustomTabBarButton = ({children,onPress}) => (
 );
 
 const Tabs = () => {
-    const getTabBarVisibility = (route) => {
-        const routeName = route.state ? route.state.routes[route.state.index].name : '';
-
-        if(routeName === "Chat") {
-            return false;
-        } else {
-            return true;
-        }
-    };
 
     return (
         <Tab.Navigator
@@ -65,10 +53,11 @@ const Tabs = () => {
                 name="Home"
                 component ={MainStackNavigator}
                 options={{
+                    headerShown: false,
                 tabBarIcon: ({focused}) => (
                     <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
                         <Image
-                            source={require('../assets/icons/car_icon.png')}
+                            source={require('../assets/icons/find_icon.png')}
                             resizeMode='contain'
                             style={{
                                 width: 25,
@@ -76,14 +65,13 @@ const Tabs = () => {
                                 tintColor: focused ? '#e32f45' : '#748c94'
                             }}/>
                         <Text style={{color: focused ? '#e32f45' : '#748c94',fontSize:12}}>
-                            AB11222
+                            Find
                         </Text>
                     </View>
                         ),
                         }}/>
 
-                        <Tab.Screen name="Messages" component ={ChatStackNavigator} options={({route}) => ({
-                            tabBarVisible: getTabBarVisibility(route),
+                        <Tab.Screen name="Messages" component ={ChatStackNavigator} options={{
                 tabBarIcon: ({focused}) => (
                     <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
                         <Image
@@ -99,9 +87,10 @@ const Tabs = () => {
                         </Text>
                     </View>
                         ),
-                        })}/>
+                        }}/>
 
                         <Tab.Screen name="Report" component={ReportScreen} options={{
+                            headerShown:false,
                             tabBarIcon: ({focused}) => (
                                 <Image source={require('../assets/icons/plus_icon.png')}
                                        resizeMode='contain'

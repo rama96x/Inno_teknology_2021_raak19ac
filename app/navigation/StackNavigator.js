@@ -1,9 +1,10 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import WelcomeScreen from "../screens/WelcomeScreen";
-import About from "../screens/TestScreen";
-import Messages from "../screens/FindTicketsScreen";
+import AllTicketsScreen from "../screens/AllTicketsScreen";
+
+import About from "../screens/TicketDetail";
+import Messages from "../screens/MessageScreen";
 import ChatScreen from "../screens/ChatScreen";
 
 const Stack = createStackNavigator();
@@ -11,7 +12,7 @@ const Stack = createStackNavigator();
 const MainStackNavigator = ({route,navigation}) => {
     return (
         <Stack.Navigator>
-            <Stack.Screen name="HomeScreen" component={WelcomeScreen} options={{headerShown: false}}/>
+            <Stack.Screen name="HomeScreen" component={AllTicketsScreen} options={{headerShown: false}}/>
             <Stack.Screen name="About" component={About} options={{
                 headerBackTitleVisible: false
             }}/>

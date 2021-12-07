@@ -11,6 +11,10 @@ import {
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon_1 from 'react-native-vector-icons/Ionicons';
 
+
+/**
+ * Her oprettes my profile UI. Dette er en statisk side.
+ * */
 const MyProfile = ({}) => {
 
     return (
@@ -59,7 +63,7 @@ const MyProfile = ({}) => {
                 </View>
                 <View style={styles.infoBox}>
                     <Title>2</Title>
-                    <Caption>People have helped you</Caption>
+                    <Caption>People have thanked you for!</Caption>
                 </View>
             </View>
 
