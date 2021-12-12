@@ -1,3 +1,4 @@
-# Inno_teknology_2021_raak19ac
+# Quick Drive - Vejhjælps app
 
-Innovation og ny teknologi app, cbs 2021
+Eksamensaflevering i faget 'Innovation og ny teknologi' 
+Femte semester, HA(it.) CBS 2021-2022
