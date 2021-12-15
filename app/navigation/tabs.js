@@ -9,6 +9,10 @@ import Map from "../screens/MapScreen";
 
 const Tab = createBottomTabNavigator();
 
+/**
+ * Det er her jeg får lavet min BottomTabNavigator. Den er inspireret af denne youtube tutorial: https://www.youtube.com/watch?v=gPaBicMaib4
+ */
+
 const CustomTabBarButton = ({children,onPress}) => (
     <TouchableOpacity
         style={{

@@ -13,8 +13,7 @@ import {
     TextSection,
 } from '../styles/MessagesStyle';
 /*
-* Hardcoder 2 beskeder i en list/array
-* */
+* Hardcoder 2 beskeder i en array */
 const Messages = [
     {
         id: '1',

@@ -10,6 +10,10 @@ import colors from '../config/colors';
 import MapView , {Marker} from "react-native-maps";
 //for at bruge colors.primary og/eller colors.secondary
 
+/**
+ * Som jeg også nævner i rapporten, er denne kode taget fra en tidligere øvelse.
+ */
+
 const Map = ({navigation}) =>{
     //instatieringen af alle anvendte statevariabler
     const [hasLocationPermission,setLocationPermission] = useState(false);

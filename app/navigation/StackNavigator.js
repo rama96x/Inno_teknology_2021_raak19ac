@@ -9,6 +9,11 @@ import ChatScreen from "../screens/ChatScreen";
 
 const Stack = createStackNavigator();
 
+/**
+ * Her bliver begge mine stack navigator implementeret.
+ * MainSTackNAvigator er Ticket siden, hvor alle Ticket befinder sig
+ * ChatStackNAvigator er message skærmene
+ */
 const MainStackNavigator = ({route,navigation}) => {
     return (
         <Stack.Navigator>

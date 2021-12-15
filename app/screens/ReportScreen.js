@@ -4,6 +4,10 @@ import {StatusBar} from "expo-status-bar";
 
 import colors from '../config/colors';
 
+/**
+ * På denne side laver jeg rapport siden (+ ikonet), som er en statisk side, med 3 knapper og 1 input felt
+ */
+
 const ReportScreen = ({}) =>{
     const buttonHasBeenClicked = () => {
         console.log("you have been clicked")
